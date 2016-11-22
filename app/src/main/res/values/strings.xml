@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">EventManager</string>
+    <string name="time_in">Time In</string>
+    <string name="time_out">Time Out</string>
 </resources>
