@@ -6,13 +6,12 @@ import com.google.gson.annotations.SerializedName;
 public class Guards {
 
     @SerializedName("guard_id")
-    @Expose
     private String guardId;
+
     @SerializedName("token_no")
-    @Expose
     private String tokenNo;
+
     @SerializedName("name")
-    @Expose
     private String name;
 
     public String getGuardId() {
