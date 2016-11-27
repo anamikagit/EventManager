@@ -33,7 +33,7 @@ public class MainActivityTimeOut extends AppCompatActivity {
         ApiInterface apiService =
                 ApiClient.getClient().create(ApiInterface.class);
 
-        Call<List<Guard>> call = apiService.getPunchedGuardList("2016-11-26");
+        Call<List<Guard>> call = apiService.getPunchedGuardList(Utility.getCurrentDate());
         call.enqueue(new Callback<List<Guard>>() {
             @Override
             public void onResponse(Call<List<Guard>> call, Response<List<Guard>> response) {

@@ -13,7 +13,7 @@ public interface ApiInterface {
     @GET("getguard")
     Call<List<Guard>> getGuardList(@Query("center_id") String apiKey);
 
-    @GET("/sgm_android/WebService.asmx/insertgaurd")
+    @GET("insertgaurd")
     Call<List<GuardSendResponce>> sendGuardAttendence(@Query("grdid") String guardId,
                                                                @Query("gaurd_name") String guardName,
                                                                @Query("dttm") String dateTime,
