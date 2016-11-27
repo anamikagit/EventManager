@@ -25,5 +25,13 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(i);
             }
         });
+
+        timeOut.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i=new Intent(MainActivity.this,MainActivityTimeOut.class);
+                startActivity(i);
+            }
+        });
     }
 }

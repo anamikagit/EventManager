@@ -19,6 +19,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".activity.MainActivityTimeIn"></activity>
+        <activity android:name=".activity.MainActivityTimeOut"></activity>
+
     </application>
 
 </manifest>
