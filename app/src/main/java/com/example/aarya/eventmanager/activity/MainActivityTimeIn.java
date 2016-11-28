@@ -31,20 +31,19 @@ public class MainActivityTimeIn extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_time_in);
 
-        // display IMEI num and date time(24-nov-2016)
+        // display IMEI num and date time
         String deviceNum;
         TelephonyManager telephonyManager = (TelephonyManager) getSystemService(Context.TELEPHONY_SERVICE);
         deviceNum = telephonyManager.getDeviceId();
         Utility.imei = deviceNum.toString();
-//        Toast.makeText(MainActivityTimeIn.this, deviceNum+" "+strDate,Toast.LENGTH_LONG).show();
+        //Toast.makeText(MainActivityTimeIn.this, deviceNum+" "+strDate,Toast.LENGTH_LONG).show();
         //Recycler View
         final RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        ApiInterface apiService =
-                ApiClient.getClient().create(ApiInterface.class);
+        ApiInterface apiSeervice = ApiClient.getClient().create(ApiInterface.class);
 
-        Call<List<Guard>> call = apiService.getGuardList("1");
+        Call<List<Guard>> call = apiSeervice.getGuardList("1");
         call.enqueue(new Callback<List<Guard>>() {
             @Override
             public void onResponse(Call<List<Guard>> call, Response<List<Guard>> response) {
@@ -57,6 +56,5 @@ public class MainActivityTimeIn extends AppCompatActivity {
                 Log.e(TAG, "Call failed: " + t.getMessage());
             }
         });
-
     }
 }

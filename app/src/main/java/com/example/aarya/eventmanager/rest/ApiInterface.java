@@ -13,13 +13,14 @@ public interface ApiInterface {
     @GET("getguard")
     Call<List<Guard>> getGuardList(@Query("center_id") String apiKey);
 
+    @GET("getguardrepdata")
+    Call<List<Guard>> getPunchedGuardList(@Query("date") String apiKey);
+
     @GET("insertgaurd")
     Call<List<GuardSendResponce>> sendGuardAttendence(@Query("grdid") String guardId,
                                                                @Query("gaurd_name") String guardName,
                                                                @Query("dttm") String dateTime,
                                                                @Query("imei") String imei,
                                                                @Query("rep_flag") boolean repFlag);
-    @GET("getguardrepdata")
-    Call<List<Guard>> getPunchedGuardList(@Query("date") String apiKey);
 
 }
