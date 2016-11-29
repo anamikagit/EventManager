@@ -11,7 +11,7 @@ import retrofit2.http.Query;
 
 public interface ApiInterface {
     @GET("getguard")
-    Call<List<Guard>> getGuardList(@Query("center_id") String apiKey);
+    Call<List<Guard>> getGuardList(@Query("imei") String apiKey);
 
     @GET("getguardrepdata")
     Call<List<Guard>> getPunchedGuardList(@Query("date") String apiKey);
@@ -24,3 +24,5 @@ public interface ApiInterface {
                                                                @Query("rep_flag") boolean repFlag);
 
 }
+//http://111.118.178.163/sgm_android/WebService.asmx/getguard?imei=@parameter
+

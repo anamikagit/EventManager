@@ -43,7 +43,7 @@ public class MainActivityTimeIn extends AppCompatActivity {
 
         ApiInterface apiSeervice = ApiClient.getClient().create(ApiInterface.class);
 
-        Call<List<Guard>> call = apiSeervice.getGuardList("1");
+        Call<List<Guard>> call = apiSeervice.getGuardList(Utility.imei);
         call.enqueue(new Callback<List<Guard>>() {
             @Override
             public void onResponse(Call<List<Guard>> call, Response<List<Guard>> response) {
