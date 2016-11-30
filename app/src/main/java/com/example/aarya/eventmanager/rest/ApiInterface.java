@@ -16,6 +16,9 @@ public interface ApiInterface {
     @GET("getguardrepdata")
     Call<List<Guard>> getPunchedGuardList(@Query("date") String apiKey);
 
+    @GET("getcenter")
+    Call<List<Guard>> getCenterDetail(@Query("imei") String apiKey);
+
     @GET("insertgaurd")
     Call<List<GuardSendResponce>> sendGuardAttendence(@Query("grdid") String guardId,
                                                                @Query("gaurd_name") String guardName,
