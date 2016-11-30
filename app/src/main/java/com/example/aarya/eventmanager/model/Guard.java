@@ -14,8 +14,31 @@ public class Guard {
     @SerializedName("name")
     private String name;
 
+    @SerializedName("center_id")
+    private String centerId;
+
+    @SerializedName("name")
+    private String centerName;
+
+    public String getCenterId() {
+        return centerId;
+    }
+
+    public void setCenterId(String centerId) {
+        this.centerId = centerId;
+    }
+
+    public String getCenterName() {
+        return centerName;
+    }
+
+    public void setCenterName(String centerName) {
+        this.centerName = centerName;
+    }
+
     @SerializedName("Replacement")
     private String replacement;
+
 
     public String getReplacement() {
         return replacement;
