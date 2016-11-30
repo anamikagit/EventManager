@@ -17,10 +17,17 @@
        android:text="@string/time_in"
        android:layout_marginTop="20dp" />
     <Button
+        android:id="@+id/center_detail"
+        android:layout_width="wrap_content"
+        android:text="center Detail"
+        android:layout_below="@+id/time_out"
+        android:layout_marginTop="100dp"
+        android:layout_height="wrap_content" />
+    <Button
         android:id="@+id/time_out"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="80dp"
         android:layout_centerVertical="true"
         android:text="@string/time_out"
         android:layout_below="@+id/time_in"/>
