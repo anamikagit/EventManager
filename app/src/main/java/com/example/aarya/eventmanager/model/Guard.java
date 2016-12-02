@@ -11,8 +11,8 @@ public class Guard {
     @SerializedName("token_no")
     private String tokenNo;
 
-    @SerializedName("name")
-    private String name;
+   /* @SerializedName("name")
+    private String name;*/
 
     @SerializedName("center_id")
     private String centerId;
@@ -74,12 +74,12 @@ public class Guard {
         this.tokenNo = tokenNo;
     }
 
-    public String getName() {
+   /* public String getName() {
         return name;
     }
 
     public void setName(String name) {
         this.name = name;
-    }
+    }*/
 
 }

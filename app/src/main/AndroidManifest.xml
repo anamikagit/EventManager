@@ -3,7 +3,7 @@
     package="com.example.aarya.eventmanager">
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
 
     <application
         android:allowBackup="true"
@@ -18,9 +18,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.MainActivityTimeIn"></activity>
-        <activity android:name=".activity.MainActivityTimeOut"></activity>
-
+        <activity android:name=".activity.MainActivityTimeIn" />
+        <activity android:name=".activity.MainActivityTimeOut" />
+        <activity android:name=".activity.CenterDetail" />
     </application>
 
 </manifest>

@@ -58,14 +58,14 @@ public class GuardListAdapter extends RecyclerView.Adapter<GuardListAdapter.Guar
         Log.e("zia", "onBindViewHolder is called");
 
         final Guard guard=guardlist.get(position);
-        holder.guardName.setText(guard.getName().toUpperCase());
+       // holder.guardName.setText(guard.getName().toUpperCase());
         holder.guardToken.setText(guard.getTokenNo().toUpperCase());
         holder.checkBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
                 Log.e("zia", "CheckButton is checked :"+b);
                 Log.e("zia", "Date time: "+ Utility.getDateTime());
-                Log.e("zia", "Imei no: "+Utility.imei);
+               // Log.e("zia", "Imei no: "+Utility.imei);
 
                 guard.setGuardSelected(b);
             }

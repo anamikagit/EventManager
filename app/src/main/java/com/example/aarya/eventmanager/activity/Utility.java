@@ -11,7 +11,7 @@ import java.util.Date;
 
 public class Utility {
 
-    public static String imei;
+    //public static String imei;
 
     public static String  getDateTime(){
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
