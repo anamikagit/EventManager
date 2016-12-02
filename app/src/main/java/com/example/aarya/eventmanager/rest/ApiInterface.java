@@ -1,5 +1,6 @@
 package com.example.aarya.eventmanager.rest;
 
+import com.example.aarya.eventmanager.model.Center;
 import com.example.aarya.eventmanager.model.GuardSendResponce;
 import com.example.aarya.eventmanager.model.Guard;
 
@@ -17,7 +18,7 @@ public interface ApiInterface {
     Call<List<Guard>> getPunchedGuardList(@Query("date") String apiKey);
 
     @GET("getcenter")
-    Call<List<Guard>> getCenterDetail(@Query("imei") String apiKey);
+    Call<List<Center>> getCenterDetail(@Query("imei") String apiKey);
 
     @GET("insertgaurd")
     Call<List<GuardSendResponce>> sendGuardAttendence(@Query("grdid") String guardId,

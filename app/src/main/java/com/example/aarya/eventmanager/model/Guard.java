@@ -11,30 +11,8 @@ public class Guard {
     @SerializedName("token_no")
     private String tokenNo;
 
-   /* @SerializedName("name")
-    private String name;*/
-
-    @SerializedName("center_id")
-    private String centerId;
-
     @SerializedName("name")
-    private String centerName;
-
-    public String getCenterId() {
-        return centerId;
-    }
-
-    public void setCenterId(String centerId) {
-        this.centerId = centerId;
-    }
-
-    public String getCenterName() {
-        return centerName;
-    }
-
-    public void setCenterName(String centerName) {
-        this.centerName = centerName;
-    }
+    private String name;
 
     @SerializedName("Replacement")
     private String replacement;

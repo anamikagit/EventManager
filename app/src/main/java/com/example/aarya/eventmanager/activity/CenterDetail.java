@@ -8,9 +8,8 @@ import android.util.Log;
 import android.widget.TextView;
 
 import com.example.aarya.eventmanager.R;
-import com.example.aarya.eventmanager.adapter.GuardListAdapter;
+import com.example.aarya.eventmanager.model.Center;
 import com.example.aarya.eventmanager.model.Guard;
-import com.example.aarya.eventmanager.model.GuardSendResponce;
 import com.example.aarya.eventmanager.rest.ApiClient;
 import com.example.aarya.eventmanager.rest.ApiInterface;
 
@@ -42,18 +41,18 @@ public class CenterDetail extends AppCompatActivity {
         ApiInterface apiService =
                 ApiClient.getClient().create(ApiInterface.class);
 
-        Call<List<Guard>> call = apiService.getCenterDetail(deviceNum);
-        call.enqueue(new Callback<List<Guard>>() {
+        Call<List<Center>> call = apiService.getCenterDetail(deviceNum);
+        call.enqueue(new Callback<List<Center>>() {
             @Override
-            public void onResponse(Call<List<Guard>> call, Response<List<Guard>> response) {
-                List<Guard> guards = response.body();
-                centerId.setText(guards.get(0).getCenterId());
-                centerName.setText(guards.get(0).getCenterName());
+            public void onResponse(Call<List<Center>> call, Response<List<Center>> response) {
+                List<Center> centers = response.body();
+                centerId.setText(centers.get(0).getCenterId());
+                centerName.setText(centers.get(0).getCenterName());
 
             }
 
             @Override
-            public void onFailure(Call<List<Guard>> call, Throwable t) {
+            public void onFailure(Call<List<Center>> call, Throwable t) {
                 Log.e(TAG, "Call failed: " + t.getMessage());
             }
         });
